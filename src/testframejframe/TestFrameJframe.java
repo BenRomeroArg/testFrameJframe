@@ -16,6 +16,8 @@ public class TestFrameJframe {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Home v = new Home();
+        v.setVisible(true);
     }
     
 }
