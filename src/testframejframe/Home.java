@@ -38,7 +38,6 @@ public class Home extends javax.swing.JFrame {
         jTextArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(400, 500));
 
         jBinit.setText("GIT INIT");
         jBinit.addActionListener(new java.awt.event.ActionListener() {
@@ -93,6 +92,7 @@ public class Home extends javax.swing.JFrame {
         jTextArea.setForeground(new java.awt.Color(0, 0, 0));
         jTextArea.setRows(5);
         jTextArea.setText("Git es un sistema de control de versiones, \nesto te permite llevar registro de todas \nlas actualizaciones\nde tu proyecto. ");
+        jTextArea.setMargin(new java.awt.Insets(0, 5, 0, 5));
         jScrollPane1.setViewportView(jTextArea);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -128,18 +128,19 @@ public class Home extends javax.swing.JFrame {
                 .addGap(33, 33, 33)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jBinit)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jBadd, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jBcommit))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jBinit)
+                        .addComponent(jBcommit)))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jBpush)
                     .addComponent(jBpull)
                     .addComponent(jBstatus))
-                .addGap(28, 28, 28)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(158, Short.MAX_VALUE))
         );
 
         pack();
